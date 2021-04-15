@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<input type="text" name="pass1" id="pass1">
+	<input type="text" name="pass2" id="pass2">
+	<button onclick="validate()">Validate</button>
+</body>
+<script type="text/javascript">
+	function validate() {
+		let pass1 = document.getElementById("pass1");
+		let pass2 = document.getElementById("pass2");
+
+		var output = "";
+
+		if (pass1.value.length < 8 || pass2.value.length < 8) {
+			output += "Password too short! (Minimum 8 characters)\n";
+		}
+		if (pass1.value !== pass2.value) {
+			output += "Passwords don't match!\n";
+		} 
+
+		if (output === "") {
+			output += "Password is valid!\n"
+		}
+
+		alert(output);
+	}
+</script>
+</html>

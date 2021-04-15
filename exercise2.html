@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<img src="images/apparatus.png" id="img" width=800 height=600><br>
+	<button id="prev" onclick="movePrev()">Previous</button>
+	<button id="next" onclick="moveNext()">Next</button>
+</body>
+<script type="text/javascript">
+	let images = ["apparatus.png", "bobs.png", "cosmic_rays.png", "decay.png", "dispersion.png", "Figure_1.png", "intervals.png", "legendre.png", "stokes.png"];
+	var i = 0;
+	let img = document.getElementById("img");
+
+	function movePrev() {
+		i += images.length - 1;
+		i %= images.length;
+
+		img.src = "images/" + images[i];
+	}
+	function moveNext() {
+		i += 1;
+		i %= images.length;
+
+		img.src = "images/" + images[i];
+	}
+</script>
+</html>

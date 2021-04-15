@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+	<div>
+		<h2>Border</h2>
+		<h3>8-bit color from 0-255</h3>
+		<label for="border_red">Border Color (Red)</label>
+		<input type="number" name="border_red" id="border_red" value=255><br>
+
+		<label for="border_green">Border Color (Green)</label>
+		<input type="number" name="border_green" id="border_green" value=255><br>
+
+		<label for="border_blue">Border Color (Blue)</label>
+		<input type="number" name="border_blue" id="border_blue" value=255><br>
+
+		<label for="width">Border Width (px)</label>
+		<input type="number" name="width" id="width" value=0>
+	</div>
+
+	<div>
+		<h2>Background Color</h2>
+		<h3>8-bit color from 0-255</h3>
+		<label for="bg_red">Background Color (Red)</label>
+		<input type="number" name="bg_red" id="bg_red" value=255><br>
+
+		<label for="bg_green">Background Color (Green)</label>
+		<input type="number" name="bg_green" id="bg_green" value=255><br>
+
+		<label for="bg_blue">Background Color (Blue)</label>
+		<input type="number" name="bg_blue" id="bg_blue" value=255>
+	</div>
+
+	<button onclick="changeStyle()">Style</button>
+
+</body>
+<script type="text/javascript">
+
+	let p = document.getElementById("text");
+
+	function changeStyle() {
+		let borderRed = document.getElementById("border_red").value;
+		let borderGreen = document.getElementById("border_green").value;
+		let borderBlue = document.getElementById("border_blue").value;
+		let borderWidth = document.getElementById("width").value;
+		p.style.border = borderWidth + "px solid rgb(" + borderRed + ", " + borderGreen + ", " + borderBlue + ")"
+
+		let backgroundRed = document.getElementById("bg_red").value;
+		let backgroundGreen = document.getElementById("bg_green").value;
+		let backgroundBlue = document.getElementById("bg_blue").value;
+
+		p.style.backgroundColor = "rgb(" + backgroundRed + ", " + backgroundGreen + ", " + backgroundBlue + ")";
+	}
+</script>
+</html>
